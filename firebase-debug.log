@@ -1,0 +1,144 @@
+[debug] [2024-08-10T20:25:47.144Z] ----------------------------------------------------------------------
+[debug] [2024-08-10T20:25:47.146Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jessi\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-08-10T20:25:47.146Z] CLI Version:   13.15.1
+[debug] [2024-08-10T20:25:47.146Z] Platform:      win32
+[debug] [2024-08-10T20:25:47.146Z] Node Version:  v20.16.0
+[debug] [2024-08-10T20:25:47.146Z] Time:          Sat Aug 10 2024 15:25:47 GMT-0500 (Central Daylight Time)
+[debug] [2024-08-10T20:25:47.147Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-10T20:25:47.153Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-10T20:25:47.153Z] > authorizing via signed-in user (jessiezheng1230@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\jessi\Documents\customer-support-ai
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-08-10T20:26:25.130Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-08-10T20:26:25.433Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-08-10T20:26:25.434Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project chatbot-2ad9e (Chatbot) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2024-08-10T20:26:26.784Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/firebasedatabase.googleapis.com [none]
+[debug] [2024-08-10T20:26:26.784Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/chatbot-2ad9e
+[debug] [2024-08-10T20:26:26.990Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/firebasedatabase.googleapis.com 200
+[debug] [2024-08-10T20:26:26.990Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2024-08-10T20:26:26.991Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/chatbot-2ad9e/locations/-/instances/chatbot-2ad9e-default-rtdb [none]
+[debug] [2024-08-10T20:26:27.238Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/chatbot-2ad9e/locations/-/instances/chatbot-2ad9e-default-rtdb 200
+[debug] [2024-08-10T20:26:27.239Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/chatbot-2ad9e/locations/-/instances/chatbot-2ad9e-default-rtdb {"name":"projects/763850353573/locations/us-central1/instances/chatbot-2ad9e-default-rtdb","project":"projects/763850353573","databaseUrl":"https://chatbot-2ad9e-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2024-08-10T20:26:30.814Z] >>> [apiv2][query] GET https://chatbot-2ad9e-default-rtdb.firebaseio.com/.settings/rules.json [none]
+[debug] [2024-08-10T20:26:30.940Z] <<< [apiv2][status] GET https://chatbot-2ad9e-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2024-08-10T20:26:30.940Z] <<< [apiv2][body] GET https://chatbot-2ad9e-default-rtdb.firebaseio.com/.settings/rules.json [stream]
+[info] +  Database Rules for chatbot-2ad9e-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2024-08-10T20:26:30.943Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/firestore.googleapis.com [none]
+[debug] [2024-08-10T20:26:30.943Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/firestore.googleapis.com x-goog-quota-user=projects/chatbot-2ad9e
+[debug] [2024-08-10T20:26:31.078Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/firestore.googleapis.com 200
+[debug] [2024-08-10T20:26:31.078Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/firestore.googleapis.com [omitted]
+[debug] [2024-08-10T20:26:31.079Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/chatbot-2ad9e/databases/(default) [none]
+[debug] [2024-08-10T20:26:31.316Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/chatbot-2ad9e/databases/(default) 200
+[debug] [2024-08-10T20:26:31.316Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/chatbot-2ad9e/databases/(default) {"name":"projects/chatbot-2ad9e/databases/(default)","uid":"9c358378-433f-4757-b52d-60c0e72d47f0","createTime":"2024-08-10T20:25:25.106894Z","updateTime":"2024-08-10T20:25:25.106894Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2024-08-10T20:25:25.106894Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IOf4xpuh64cDMM7x2fqg64cD"}
+[debug] [2024-08-10T20:26:31.316Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-08-10T20:26:31.316Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-10T20:26:31.316Z] > authorizing via signed-in user (jessiezheng1230@gmail.com)
+[debug] [2024-08-10T20:26:31.316Z] [iam] checking project chatbot-2ad9e for permissions ["firebase.projects.get"]
+[debug] [2024-08-10T20:26:31.317Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-2ad9e:testIamPermissions [none]
+[debug] [2024-08-10T20:26:31.317Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-2ad9e:testIamPermissions x-goog-quota-user=projects/chatbot-2ad9e
+[debug] [2024-08-10T20:26:31.317Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-2ad9e:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-08-10T20:26:31.467Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-2ad9e:testIamPermissions 200
+[debug] [2024-08-10T20:26:31.467Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-2ad9e:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-08-10T20:26:33.087Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/chatbot-2ad9e/releases pageSize=10&pageToken=
+[debug] [2024-08-10T20:26:33.258Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/chatbot-2ad9e/releases 200
+[debug] [2024-08-10T20:26:33.258Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/chatbot-2ad9e/releases {"releases":[{"name":"projects/chatbot-2ad9e/releases/cloud.firestore","rulesetName":"projects/chatbot-2ad9e/rulesets/23b793e5-6d9f-4a89-9fb6-31b7e2674424","createTime":"2024-08-10T20:25:28.940731Z","updateTime":"2024-08-10T20:25:28.940731Z"}]}
+[debug] [2024-08-10T20:26:33.258Z] Found ruleset: projects/chatbot-2ad9e/rulesets/23b793e5-6d9f-4a89-9fb6-31b7e2674424
+[debug] [2024-08-10T20:26:33.258Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/chatbot-2ad9e/rulesets/23b793e5-6d9f-4a89-9fb6-31b7e2674424 [none]
+[debug] [2024-08-10T20:26:33.350Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/chatbot-2ad9e/rulesets/23b793e5-6d9f-4a89-9fb6-31b7e2674424 200
+[debug] [2024-08-10T20:26:33.350Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/chatbot-2ad9e/rulesets/23b793e5-6d9f-4a89-9fb6-31b7e2674424 [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-08-10T20:26:34.629Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/chatbot-2ad9e/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2024-08-10T20:26:34.629Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/chatbot-2ad9e/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2024-08-10T20:26:34.741Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/chatbot-2ad9e/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2024-08-10T20:26:34.742Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/chatbot-2ad9e/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2024-08-10T20:26:35.040Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/chatbot-2ad9e/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2024-08-10T20:26:35.040Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/chatbot-2ad9e/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/chatbot-2ad9e/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Functions Setup
+[debug] [2024-08-10T20:26:35.042Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-10T20:26:35.042Z] > authorizing via signed-in user (jessiezheng1230@gmail.com)
+[debug] [2024-08-10T20:26:35.042Z] [iam] checking project chatbot-2ad9e for permissions ["firebase.projects.get"]
+[debug] [2024-08-10T20:26:35.042Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-2ad9e:testIamPermissions [none]
+[debug] [2024-08-10T20:26:35.042Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-2ad9e:testIamPermissions x-goog-quota-user=projects/chatbot-2ad9e
+[debug] [2024-08-10T20:26:35.042Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-2ad9e:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-08-10T20:26:35.113Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-2ad9e:testIamPermissions 200
+[debug] [2024-08-10T20:26:35.113Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-2ad9e:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-08-10T20:26:35.113Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-08-10T20:26:35.114Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/chatbot-2ad9e
+[debug] [2024-08-10T20:26:35.114Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-08-10T20:26:35.114Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/chatbot-2ad9e
+[debug] [2024-08-10T20:26:35.247Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/cloudfunctions.googleapis.com 200
+[debug] [2024-08-10T20:26:35.247Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2024-08-10T20:26:35.247Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2024-08-10T20:26:35.247Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/chatbot-2ad9e
+[debug] [2024-08-10T20:26:35.365Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/runtimeconfig.googleapis.com 200
+[debug] [2024-08-10T20:26:35.365Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-08-10T20:26:35.559Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2024-08-10T20:26:35.559Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2024-08-10T20:26:45.561Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-08-10T20:26:45.561Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/chatbot-2ad9e
+[debug] [2024-08-10T20:26:45.864Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/cloudfunctions.googleapis.com 200
+[debug] [2024-08-10T20:26:45.864Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-2ad9e/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] +  Wrote functions/package.json 
+[info] +  Wrote functions/index.js 
+[info] +  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[debug] [2024-08-10T20:28:21.178Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chatbot-2ad9e [none]
+[debug] [2024-08-10T20:28:21.347Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chatbot-2ad9e 200
+[debug] [2024-08-10T20:28:21.347Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chatbot-2ad9e {"projectId":"chatbot-2ad9e","projectNumber":"763850353573","displayName":"Chatbot","name":"projects/chatbot-2ad9e","resources":{"hostingSite":"chatbot-2ad9e","realtimeDatabaseInstance":"chatbot-2ad9e-default-rtdb"},"state":"ACTIVE","etag":"1_9727029c-055c-49a2-a129-a5647e135b2d"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 

@@ -1,0 +1,7 @@
+{
+    "chatbotTitle": "AI Customer Support Chatbot",
+    "greeting": "Hi! I'm the support assistant. How can I help you today?",
+    "error": "I'm sorry, but I encountered an error. Please try again later.",
+    "typing": "AI Customer Support is typing...",
+    "typeMessage": "Type your message"
+}

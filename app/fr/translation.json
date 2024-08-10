@@ -1,0 +1,15 @@
+{
+    "chatbotTitle": "Chatbot",
+    "greeting": "Bonjour ! Comment puis-je vous aider ?",
+    "typing": "En train de taper...",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "errorSubmittingFeedback": "Échec de la soumission des commentaires. Veuillez réessayer.",
+    "thankYouForFeedback": "Merci pour vos retours !",
+    "typeMessage": "Saisir un message",
+    "Give Feedback": "Donner un avis",
+    "Please rate the chat!": "Veuillez évaluer le chat !",
+    "Leave your feedback here!": "Laissez vos commentaires ici !",
+    "submit": "Soumettre",
+    "cancel": "Annuler"
+  }
+  
