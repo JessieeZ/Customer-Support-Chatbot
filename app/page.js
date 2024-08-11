@@ -11,7 +11,7 @@ import './i18n';
 
 // Styled component for the chat header
 const Header = styled(Box)(({ theme }) => ({
-  background: 'linear-gradient(135deg, #1E88E5, #64B5F6)', 
+  backggitnd: 'linear-gradient(135deg, #1E88E5, #64B5F6)', 
   color: '#FFFFFF', // Text color
   borderRadius: '16px 16px 0 0', // Rounded corners
   textAlign: 'center', // Centered text
