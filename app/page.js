@@ -8,6 +8,8 @@ import PersonIcon from '@mui/icons-material/Person';
 import { styled } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import './i18n'; 
+import { firestore } from '@/firebase';
+import { collection, addDoc } from 'firebase/firestore'
 
 // Styled component for the chat header
 const Header = styled(Box)(({ theme }) => ({
@@ -82,8 +84,9 @@ export default function Home() {
 
   // Feedback form states
   const [isFeedbackVisible, setIsFeedbackVisible] = useState(false); 
-  const [feedbackRating, setFeedbackRating] = useState(0); 
+  const [feedbackRating, setFeedbackRating] = useState(0);
   const [feedbackComment, setFeedbackComment] = useState(''); 
+  
 
   // Function to send a message
   const sendMessage = async () => {
@@ -197,27 +200,17 @@ export default function Home() {
         comment: feedbackComment,
         timestamp: getCurrentTime(),
       };
-
-      const response = await fetch('/api/feedback', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(feedbackData),
-      });
-
-      if (!response.ok) {
-        throw new Error('Feedback submission failed');
-      }
-
-      // Clear feedback form and hide it
-      setFeedbackRating(0);
+  
+      // Add a new document with a generated ID
+      const feedbackCollectionRef = collection(firestore, 'feedback');
+      await addDoc(feedbackCollectionRef, feedbackData);
+  
       setFeedbackComment('');
       setIsFeedbackVisible(false);
-      alert(t('thankYouForFeedback')); 
+      alert(t('Thank you for your feedback!'));
     } catch (error) {
       console.error('Error submitting feedback:', error);
-      alert(t('errorSubmittingFeedback')); 
+      alert(t('There is an error submitting your feedback!') + ': ' + error.message);
     }
   };
 
@@ -401,16 +394,14 @@ export default function Home() {
           }}
         >
           <Typography variant="h6" gutterBottom sx={{ mb: 2, fontWeight: 'bold', color: '#333333' }}>
-            {t('Please rate the chat!')} {/* Feedback form title */}
+            {t('Please leave a feedback!')} {/* Feedback form title */}
           </Typography>
-          <Stack spacing={2} alignItems="center">
-            <Rating
+          <Rating
               value={feedbackRating}
-              onChange={(event, newValue) => setFeedbackRating(newValue)} 
+              onChange={(event, newValue) => setFeedbackRating(newValue)}
               precision={0.5}
-              size="large"
-              sx={{ mb: 2, color: '#FFC107' }}
-            />
+          />
+          <Stack spacing={2} alignItems="center">
             <TextField
               label={t('Leave your feedback here!')} 
               multiline
@@ -438,13 +429,14 @@ export default function Home() {
                 variant="contained"
                 color="primary"
                 size="large"
+                disabled={!feedbackComment.trim()}  // Disable button if feedbackComment is empty
                 sx={{
                   borderRadius: '8px',
                   padding: '10px 20px',
-                  backgroundColor: '#1E88E5',
-                  '&:hover': {
+                  backgroundColor: '#1E88E5','&:hover': 
+                  {
                     backgroundColor: '#1565C0',
-                  },
+                  },  
                   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
                 }}
               >
